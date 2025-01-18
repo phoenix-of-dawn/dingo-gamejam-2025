@@ -5,6 +5,8 @@ var nutrients_per_second: float = 0.0
 
 @onready var nut_text = $NutrientCount
 @onready var nut_per_sec_text = %NutrientPerSecond
+@onready var scroll_cont = $ScrollContainer
+@onready var button_cont = %Buttons
 @onready var upgrade_template = preload("res://Scenes/upgrade.tscn")
 
 var upgrades: Dictionary = {
@@ -17,6 +19,10 @@ var upgrades: Dictionary = {
 }
 
 func _ready() -> void:
+	scroll_cont.position.y = nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y - 10
+	scroll_cont.size.y = 1080 - nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y
+	scroll_cont.size.x = 200
+	scroll_cont.position.x = size.x / 2 - scroll_cont.size.x / 2
 	make_buttons()
 
 func _process(_delta: float) -> void:
@@ -36,7 +42,7 @@ func make_buttons() -> void:
 		button.nutrients_per_second = upgrades[up_name][2]
 		button.cost_increase = upgrades[up_name][3]
 		button.up_purchased.connect(_update_nutrients)
-		add_child(button)
+		button_cont.add_child(button)
 		up_position += button.size.y + 2
 
 func _update_nutrients(cost, up_nutrients_per_second) -> void: 

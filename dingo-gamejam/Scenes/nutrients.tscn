@@ -33,4 +33,15 @@ theme_override_font_sizes/font_size = 30
 [node name="NutrientCountdown" type="Timer" parent="."]
 autostart = true
 
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 50.0
+offset_bottom = 40.0
+
+[node name="Buttons" type="VBoxContainer" parent="ScrollContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
 [connection signal="timeout" from="NutrientCountdown" to="." method="_on_nutrient_countdown_timeout"]

@@ -11,7 +11,7 @@ var amount: int = 0
 signal up_purchased(cost, nutrients_per_second)
 
 func _on_pressed() -> void:
-	if get_parent().nutrients >= cost + (cost_increase * amount)**2:
+	if get_parent().get_parent().get_parent().nutrients >= cost + (cost_increase * amount)**2:
 		up_purchased.emit(cost + (cost_increase * amount)**2, nutrients_per_second)
 		
 		if not repeatable:
