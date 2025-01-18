@@ -1,6 +1,6 @@
 extends Control
 
-var nutrients: int = 10
+@export var nutrients: int = 10
 @onready var text = $NutrientCount
 @onready var upgrade_template = preload("res://Scenes/upgrade.tscn")
 

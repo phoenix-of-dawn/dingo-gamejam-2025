@@ -6,6 +6,7 @@ extends Button
 signal up_purchased(cost)
 
 func _on_pressed() -> void:
-	if not repeatable:
-		disabled = true
-	up_purchased.emit(cost)
+	if get_parent().nutrients >= cost:
+		if not repeatable: 
+			disabled = true
+		up_purchased.emit(cost)
