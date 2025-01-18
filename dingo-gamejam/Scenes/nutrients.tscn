@@ -21,3 +21,8 @@ offset_right = 272.0
 offset_bottom = 55.0
 theme_override_fonts/font = ExtResource("2_l4c0m")
 theme_override_font_sizes/font_size = 50
+
+[node name="NutrientCountdown" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="NutrientCountdown" to="." method="_on_nutrient_countdown_timeout"]

@@ -1,12 +1,26 @@
 extends Button
 
-@export var cost: int
+@export var up_name: String
+@export var cost: float
 @export var repeatable: bool
+@export var nutrients_per_second: float
+@export var cost_increase: float
 
-signal up_purchased(cost)
+var amount: int = 0
+
+signal up_purchased(cost, nutrients_per_second)
 
 func _on_pressed() -> void:
-	if get_parent().nutrients >= cost:
-		if not repeatable: 
+	if get_parent().nutrients >= cost + (cost_increase * amount)**2:
+		up_purchased.emit(cost + (cost_increase * amount)**2, nutrients_per_second)
+		
+		if not repeatable:
 			disabled = true
-		up_purchased.emit(cost)
+		else:
+			amount += 1
+		update_button()
+	else:
+		$AnimationPlayer.play("error")
+
+func update_button():
+	text = up_name + "\nCost: " + str(cost + (cost_increase * amount)**2)
