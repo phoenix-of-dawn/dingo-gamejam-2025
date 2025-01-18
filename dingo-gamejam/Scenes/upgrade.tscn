@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://usmia7hbmdnx"]
+
+[ext_resource type="FontFile" uid="uid://cgv2xl442kja0" path="res://Assets/Silver.ttf" id="1_comaq"]
+[ext_resource type="Script" path="res://Scripts/upgrade.gd" id="1_k7pk4"]
+
+[node name="upgrade" type="Button"]
+offset_right = 184.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("1_comaq")
+theme_override_font_sizes/font_size = 25
+script = ExtResource("1_k7pk4")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

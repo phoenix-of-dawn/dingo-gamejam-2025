@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0avorswms8w6"]
+
+[ext_resource type="Script" path="res://Scripts/nutrients.gd" id="1_kufuo"]
+[ext_resource type="FontFile" uid="uid://cgv2xl442kja0" path="res://Assets/Silver.ttf" id="2_l4c0m"]
+
+[node name="Nutrients" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -875.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kufuo")
+
+[node name="NutrientCount" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 7.0
+offset_right = 272.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("2_l4c0m")
+theme_override_font_sizes/font_size = 50
