@@ -30,7 +30,7 @@ func make_buttons() -> void:
 		button.position.x = size.x / 2 - button.size.x / 2
 		button.position.y = up_position
 		button.up_name = up_name
-		button.text = up_name + "\nCost: " + str(upgrades[up_name][0])
+		button.text = up_name + "\nCost: " + str(upgrades[up_name][0]) + "\nAmount: 0"
 		button.cost = upgrades[up_name][0]
 		button.repeatable = upgrades[up_name][1]
 		button.nutrients_per_second = upgrades[up_name][2]

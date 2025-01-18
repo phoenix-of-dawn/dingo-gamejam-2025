@@ -66,13 +66,13 @@ _data = {
 
 [node name="upgrade" type="Button"]
 offset_right = 184.0
-offset_bottom = 44.0
+offset_bottom = 100.0
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_comaq")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 script = ExtResource("1_k7pk4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

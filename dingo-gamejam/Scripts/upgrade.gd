@@ -16,11 +16,10 @@ func _on_pressed() -> void:
 		
 		if not repeatable:
 			disabled = true
-		else:
-			amount += 1
+		amount += 1
 		update_button()
 	else:
 		$AnimationPlayer.play("error")
 
 func update_button() -> void:
-	text = up_name + "\nCost: " + str(cost + (cost_increase * amount)**2)
+	text = up_name + "\nCost: " + str(cost + (cost_increase * amount)**2) + "\nAmount: " + str(amount)

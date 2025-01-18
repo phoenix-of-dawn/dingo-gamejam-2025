@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://bxfo2j2as6ipg"]
 
-[ext_resource type="Texture2D" uid="uid://chdhttlknejlh" path="res://Scenes/OIP.jpg" id="1_878yo"]
-[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_asitm"]
-[ext_resource type="FontFile" uid="uid://cgv2xl442kja0" path="res://Assets/Silver.ttf" id="2_rssat"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_77p8e"]
+[ext_resource type="Texture2D" uid="uid://chdhttlknejlh" path="res://Scenes/OIP.jpg" id="2_idxbp"]
+[ext_resource type="FontFile" uid="uid://cgv2xl442kja0" path="res://Assets/Silver.ttf" id="3_uruv4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fkvpa"]
-texture = ExtResource("1_878yo")
+texture = ExtResource("2_idxbp")
 modulate_color = Color(0.489622, 0.489622, 0.489622, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dq1r0"]
@@ -48,7 +48,7 @@ offset_right = 15.0
 offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_asitm")
+script = ExtResource("1_77p8e")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -85,7 +85,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_rssat")
+theme_override_fonts/font = ExtResource("3_uruv4")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dq1r0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xlm5l")
@@ -100,7 +100,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_rssat")
+theme_override_fonts/font = ExtResource("3_uruv4")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dq1r0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xlm5l")
@@ -124,7 +124,7 @@ grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 3
-theme_override_fonts/font = ExtResource("2_rssat")
+theme_override_fonts/font = ExtResource("3_uruv4")
 theme_override_font_sizes/font_size = 140
 text = "Treacherous Vine"
 horizontal_alignment = 1

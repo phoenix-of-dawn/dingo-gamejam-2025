@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c13g62klmxuy2"]
+[gd_scene load_steps=3 format=3 uid="uid://c13g62klmxuy2"]
 
 [ext_resource type="PackedScene" uid="uid://c0avorswms8w6" path="res://Scenes/nutrients.tscn" id="1_o0tfl"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_uyq8w"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_uyq8w")
 
 [node name="Nutrients" parent="." instance=ExtResource("1_o0tfl")]
 offset_right = 278.0
