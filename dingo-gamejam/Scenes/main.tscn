@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c0avorswms8w6" path="res://Scenes/nutrients.tscn" id="1_o0tfl"]
 
-[node name="Main Menu" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="Nutrients" parent="." instance=ExtResource("1_o0tfl")]
 offset_right = 278.0

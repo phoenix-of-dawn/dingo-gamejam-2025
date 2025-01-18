@@ -43,6 +43,5 @@ func _update_nutrients(cost, up_nutrients_per_second) -> void:
 	nutrients = snappedf(nutrients - cost, 0.1)
 	nutrients_per_second += snappedf(up_nutrients_per_second, 0.1)
 
-
 func _on_nutrient_countdown_timeout() -> void:
 	nutrients = snappedf(nutrients + nutrients_per_second, 0.1)
