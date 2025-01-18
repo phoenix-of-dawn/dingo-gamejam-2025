@@ -8,8 +8,11 @@ var nutrients_per_second: float = 0.0
 
 var upgrades: Dictionary = {
 	"Photosynthesis": [5.0, false, 0.2, 0],
-	"Chlorophyl": [7.5, true, 0.5, 3],
-	"Vine Strength": [30.0, true, 2, 5]
+	"Chlorophyl": [7.5, true, 0.5, 2],
+	"Vine Strength": [30.0, true, 2.0 , 3],
+	"Vine Girth": [100.0, true, 4.0 , 4],
+	"Vine Hardness": [400.0, true, 20.0 , 5],
+	"Iron Surplus+": [4000.0, false, 150.0, 0]
 }
 
 func _ready() -> void:
