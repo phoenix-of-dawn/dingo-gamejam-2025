@@ -1,6 +1,6 @@
 extends Control
 
-@export var nutrients: float = 5.0
+@export var nutrients: float = 2.5
 var nutrients_per_second: float = 0.0
 
 @onready var nut_text = $NutrientCount
@@ -8,8 +8,8 @@ var nutrients_per_second: float = 0.0
 @onready var upgrade_template = preload("res://Scenes/upgrade.tscn")
 
 var upgrades: Dictionary = {
-	"Photosynthesis": [5.0, false, 0.2, 0],
-	"Chlorophyl": [7.5, true, 0.5, 2],
+	"Photosynthesis": [2.5, false, 0.2, 0],
+	"Chlorophyl": [5.0, true, 0.5, 0.5],
 	"Vine Strength": [30.0, true, 2.0 , 3],
 	"Vine Girth": [100.0, true, 4.0 , 4],
 	"Vine Hardness": [400.0, true, 20.0 , 5],
@@ -23,7 +23,7 @@ func _process(_delta: float) -> void:
 	nut_text.text = "Nutrients: " + str(nutrients)
 	nut_per_sec_text.text = "Nutrients/s: " + str(nutrients_per_second)
 
-func make_buttons():
+func make_buttons() -> void:
 	var up_position = nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y - 10
 	for up_name in upgrades:
 		var button: Button = upgrade_template.instantiate()
@@ -39,7 +39,7 @@ func make_buttons():
 		add_child(button)
 		up_position += button.size.y + 2
 
-func _update_nutrients(cost, up_nutrients_per_second): 
+func _update_nutrients(cost, up_nutrients_per_second) -> void: 
 	nutrients = snappedf(nutrients - cost, 0.1)
 	nutrients_per_second += snappedf(up_nutrients_per_second, 0.1)
 

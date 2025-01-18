@@ -22,5 +22,5 @@ func _on_pressed() -> void:
 	else:
 		$AnimationPlayer.play("error")
 
-func update_button():
+func update_button() -> void:
 	text = up_name + "\nCost: " + str(cost + (cost_increase * amount)**2)
