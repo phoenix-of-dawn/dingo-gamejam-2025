@@ -1,6 +1,6 @@
 extends Control
 
-@export var nutrients: float = 2.5
+@export var nutrients: float = 10000000
 var nutrients_per_second: float = 0.0
 
 @onready var nut_text = $NutrientCount
@@ -10,8 +10,8 @@ var nutrients_per_second: float = 0.0
 @onready var upgrade_template = preload("res://Scenes/upgrade.tscn")
 
 var upgrades: Dictionary = {
-	"Photosynthesis": [2.5, false, 0.2, 0],
-	"Chlorophyl": [5.0, true, 0.5, 0.5],
+	"Photosynthesis": [2.5, false, 0.25, 0],
+	"Chlorophyl": [5.0, true, 0.75, 0.5],
 	"Vine Strength": [30.0, true, 2.0 , 3],
 	"Vine Girth": [100.0, true, 4.0 , 4],
 	"Vine Hardness": [400.0, true, 20.0 , 5],
@@ -26,7 +26,7 @@ var upgrades: Dictionary = {
 
 func _ready() -> void:
 	scroll_cont.position.y = nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y - 10
-	scroll_cont.size.y = 800 - nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y
+	scroll_cont.size.y = 1020 - nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y
 	scroll_cont.size.x = 240
 	scroll_cont.position.x = size.x / 2 - scroll_cont.size.x / 2
 	make_buttons()
@@ -52,11 +52,11 @@ func make_buttons() -> void:
 		up_position += button.size.y + 2
 
 func _update_nutrients(cost, up_nutrients_per_second) -> void: 
-	nutrients = snappedf(nutrients - cost, 0.1)
-	nutrients_per_second += snappedf(up_nutrients_per_second, 0.1)
+	nutrients = snappedf(nutrients - cost, 0.01)
+	nutrients_per_second += snappedf(up_nutrients_per_second, 0.01)
 
 func _on_nutrient_countdown_timeout() -> void:
-	nutrients = snappedf(nutrients + nutrients_per_second, 0.1)
+	nutrients = snappedf(nutrients + nutrients_per_second, 0.01)
 
 
 func _on_vine_grown(cost: float) -> void:
