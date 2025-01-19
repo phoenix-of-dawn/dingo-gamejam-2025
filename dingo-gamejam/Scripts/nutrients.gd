@@ -15,7 +15,13 @@ var upgrades: Dictionary = {
 	"Vine Strength": [30.0, true, 2.0 , 3],
 	"Vine Girth": [100.0, true, 4.0 , 4],
 	"Vine Hardness": [400.0, true, 20.0 , 5],
-	"Iron Surplus+": [4000.0, false, 150.0, 0]
+	"Iron Surplus+": [4000.0, false, 150.0, 0],
+	"Steroids": [6000.0, true, 80.0, 6],
+	"Fat Deposits": [10000.0, true, 100.0, 7],
+	"Fatter Deposits": [15000.0, true, 140.0, 8],
+	"Iron Surplus++": [30000.0, false, 400.0, 0],
+	"Expired Milk": [40000.0, true, 200.0, 11],
+	
 }
 
 func _ready() -> void:
