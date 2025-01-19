@@ -13,7 +13,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_vine_won() -> void:
-	pass
+	get_tree().change_scene_to_file("res://Scenes/win_screen.tscn")
 
 
 func _on_water_death() -> void:

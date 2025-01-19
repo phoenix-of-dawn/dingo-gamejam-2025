@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bl1g6gx3yn8o1"]
+[gd_scene load_steps=3 format=3 uid="uid://bl1g6gx3yn8o1"]
 
 [ext_resource type="Script" path="res://Scripts/death_screen.gd" id="1_rvdqf"]
+[ext_resource type="Texture2D" uid="uid://dy15upd85gbwh" path="res://Assets/Art/losing_screen.png" id="2_x7hxw"]
 
 [node name="DeathScreen" type="Control"]
 layout_mode = 3
@@ -10,3 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rvdqf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_x7hxw")
