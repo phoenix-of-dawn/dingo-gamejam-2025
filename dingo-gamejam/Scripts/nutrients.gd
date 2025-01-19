@@ -26,13 +26,9 @@ var upgrades: Dictionary = {
 
 func _ready() -> void:
 	scroll_cont.position.y = nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y - 10
-<<<<<<< HEAD
 	scroll_cont.size.y = 1000 - nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y
 	scroll_cont.size.x = 210
-=======
-	scroll_cont.size.y = 1020 - nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y
-	scroll_cont.size.x = 240
->>>>>>> 7329194835d44c421fc11027610df6aafedc3996
+
 	scroll_cont.position.x = size.x / 2 - scroll_cont.size.x / 2
 	make_buttons()
 
