@@ -6,13 +6,13 @@ extends Button
 @export var nutrients_per_second: float
 @export var cost_increase: float
 
-var amount: int = 0
+var amount: int = 1
 
 signal up_purchased(cost, nutrients_per_second)
 
 func _on_pressed() -> void:
-	if get_parent().get_parent().get_parent().nutrients >= cost + (cost_increase * amount)**2:
-		up_purchased.emit(cost + (cost_increase * amount)**2, nutrients_per_second)
+	if get_parent().get_parent().get_parent().nutrients >= cost + (cost_increase)**amount:
+		up_purchased.emit(cost + (cost_increase)**amount, nutrients_per_second)
 		
 		if not repeatable:
 			disabled = true
@@ -22,4 +22,4 @@ func _on_pressed() -> void:
 		$AnimationPlayer.play("error")
 
 func update_button() -> void:
-	text = up_name + "\nCost: " + str(cost + (cost_increase * amount)**2) + "\nAmount: " + str(amount)
+	text = up_name + "\nCost: " + str(cost + (cost_increase)**amount) + "\nAmount: " + str(amount - 1)

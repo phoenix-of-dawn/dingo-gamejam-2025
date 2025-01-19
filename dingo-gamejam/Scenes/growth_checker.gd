@@ -31,8 +31,8 @@ var growth_names: Array = [
 	"", 
 	"", 
 	"", 
-	"", 
-	"The Destroyer of World",
+	"I am Death", 
+	"The Destroyer of Worlds",
 ]
 var growth_cost = growth_costs[0]
 var current_growth = 1

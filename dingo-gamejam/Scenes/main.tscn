@@ -20,4 +20,5 @@ nutrients = 10.0
 [connection signal="grown" from="Vine" to="Nutrients" method="_on_vine_grown"]
 [connection signal="grown" from="Vine" to="Water" method="_on_vine_grown"]
 [connection signal="won" from="Vine" to="." method="_on_vine_won"]
+[connection signal="death" from="Water" to="." method="_on_water_death"]
 [connection signal="refill" from="Water" to="Nutrients" method="_on_water_refill"]
