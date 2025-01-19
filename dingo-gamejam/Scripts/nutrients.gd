@@ -62,3 +62,7 @@ func _on_nutrient_countdown_timeout() -> void:
 
 func _on_vine_grown(cost: float) -> void:
 	nutrients -= cost
+
+
+func _on_water_refill() -> void:
+	nutrients *= 0.5

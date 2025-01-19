@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cstc7rc3ie1ak"]
+[gd_scene load_steps=5 format=3 uid="uid://cstc7rc3ie1ak"]
 
 [ext_resource type="Script" path="res://Scripts/water.gd" id="1_girnd"]
+[ext_resource type="FontFile" uid="uid://cgv2xl442kja0" path="res://Assets/Silver.ttf" id="2_345ur"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gyahv"]
 bg_color = Color(0.367046, 0.0682597, 2.40654e-08, 1)
@@ -32,4 +33,16 @@ fill_mode = 3
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="Refill" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1300.0
+offset_top = 882.0
+offset_right = 1817.0
+offset_bottom = 1002.0
+theme_override_fonts/font = ExtResource("2_345ur")
+theme_override_font_sizes/font_size = 50
+text = "Refill Water
+Cost: 50%"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Refill" to="." method="_on_refill_pressed"]
