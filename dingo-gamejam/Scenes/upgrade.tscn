@@ -12,7 +12,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+shadow_offset = Vector2(-3.41, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcd7f"]
 bg_color = Color(0.856067, 0.856067, 0.856067, 1)
@@ -21,7 +21,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+shadow_offset = Vector2(-3.41, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mnl7"]
 bg_color = Color(0.835294, 0.835294, 0.835294, 1)
@@ -30,7 +30,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+shadow_offset = Vector2(-3.41, 3.41)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xf20n"]
 bg_color = Color(1, 1, 1, 1)
@@ -38,8 +38,7 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+shadow_offset = Vector2(-3.41, 3.41)
 
 [sub_resource type="Animation" id="Animation_0yovj"]
 length = 0.8
