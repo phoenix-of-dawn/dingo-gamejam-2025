@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://cgv2xl442kja0" path="res://Assets/Silver.ttf" id="1_comaq"]
 [ext_resource type="Script" path="res://Scripts/upgrade.gd" id="1_k7pk4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l4yu8"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cr77"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5f4cd"]
 bg_color = Color(0.244776, 0.244776, 0.244776, 1)
@@ -14,14 +14,7 @@ corner_radius_bottom_left = 20
 shadow_size = 5
 shadow_offset = Vector2(-3.41, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcd7f"]
-bg_color = Color(0.856067, 0.856067, 0.856067, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_size = 5
-shadow_offset = Vector2(-3.41, 3.41)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohamn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mnl7"]
 bg_color = Color(0.835294, 0.835294, 0.835294, 1)
@@ -112,9 +105,9 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_comaq")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_l4yu8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8cr77")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_5f4cd")
-theme_override_styles/hover = SubResource("StyleBoxFlat_kcd7f")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ohamn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_6mnl7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xf20n")
 script = ExtResource("1_k7pk4")

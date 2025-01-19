@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://8kgqpey0hj6u"]
+[gd_scene load_steps=4 format=3 uid="uid://8kgqpey0hj6u"]
 
 [ext_resource type="Texture2D" uid="uid://c8mld6jq4d4fh" path="res://Assets/Art/vineGROWTH.png" id="1_e42qo"]
+[ext_resource type="Script" path="res://Scripts/vine_growth.gd" id="1_jkw8p"]
+[ext_resource type="Script" path="res://Scenes/growth_checker.gd" id="3_bfwki"]
 
 [node name="Vine" type="Control"]
 layout_mode = 3
@@ -9,10 +11,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jkw8p")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(548, 319)
-scale = Vector2(3, 3)
+[node name="VineSprite" type="Sprite2D" parent="."]
+position = Vector2(950, 600)
+scale = Vector2(5, 5)
 texture = ExtResource("1_e42qo")
 hframes = 7
-vframes = 2
+vframes = 3
+
+[node name="Growth" type="Button" parent="."]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 27.0
+offset_right = 1305.0
+offset_bottom = 179.0
+theme_override_font_sizes/font_size = 75
+script = ExtResource("3_bfwki")
+
+[connection signal="grow" from="Growth" to="." method="_on_growth_grow"]
+[connection signal="pressed" from="Growth" to="Growth" method="_on_pressed"]
+[connection signal="win" from="Growth" to="." method="_on_growth_win"]
