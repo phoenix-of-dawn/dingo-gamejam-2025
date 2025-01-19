@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cstc7rc3ie1ak"]
+
+[ext_resource type="Script" path="res://Scripts/water.gd" id="1_girnd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gyahv"]
+bg_color = Color(0.367046, 0.0682597, 2.40654e-08, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4aew"]
+bg_color = Color(0.282032, 0.602643, 1, 1)
+
+[node name="Water" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_girnd")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 1826.0
+offset_top = 8.0
+offset_right = 1908.0
+offset_bottom = 1071.0
+theme_override_styles/background = SubResource("StyleBoxFlat_gyahv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k4aew")
+value = 100.0
+rounded = true
+fill_mode = 3
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

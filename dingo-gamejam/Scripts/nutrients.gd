@@ -1,6 +1,6 @@
 extends Control
 
-@export var nutrients: float = 10000000
+@export var nutrients: float = 2.5
 var nutrients_per_second: float = 0.0
 
 @onready var nut_text = $NutrientCount
@@ -16,11 +16,11 @@ var upgrades: Dictionary = {
 	"Vine Girth": [100.0, true, 4.0 , 4],
 	"Vine Hardness": [400.0, true, 20.0 , 5],
 	"Iron Surplus+": [4000.0, false, 150.0, 0],
-	"Steroids": [6000.0, true, 80.0, 6],
-	"Fat Deposits": [10000.0, true, 100.0, 7],
-	"Fatter Deposits": [15000.0, true, 140.0, 8],
-	"Iron Surplus++": [30000.0, false, 400.0, 0],
-	"Expired Milk": [40000.0, true, 200.0, 11],
+	"Steroids": [6000.0, true, 100.0, 6],
+	"Fat Deposits": [10000.0, true, 200.0, 7],
+	"Fatter Deposits": [15000.0, true, 500.0, 8],
+	"Iron Surplus++": [30000.0, false, 2000.0, 0],
+	"Expired Milk": [40000.0, true, 1000.0, 11],
 	
 }
 
