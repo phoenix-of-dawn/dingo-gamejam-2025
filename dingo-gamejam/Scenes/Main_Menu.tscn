@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bxfo2j2as6ipg"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_77p8e"]
-[ext_resource type="Texture2D" uid="uid://cr21t25beytyu" path="res://Scenes/OIP.jpg" id="2_idxbp"]
+[ext_resource type="Texture2D" uid="uid://chdhttlknejlh" path="res://Scenes/OIP.jpg" id="2_idxbp"]
 [ext_resource type="FontFile" uid="uid://cgv2xl442kja0" path="res://Assets/Silver.ttf" id="3_uruv4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fkvpa"]
