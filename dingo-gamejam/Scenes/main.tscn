@@ -1,12 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://c13g62klmxuy2"]
+[gd_scene load_steps=6 format=3 uid="uid://c13g62klmxuy2"]
 
 [ext_resource type="PackedScene" uid="uid://c0avorswms8w6" path="res://Scenes/nutrients.tscn" id="1_o0tfl"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_uyq8w"]
+[ext_resource type="Texture2D" uid="uid://bgi15ayrrjr8j" path="res://Assets/Art/background.png" id="2_ub1u7"]
 [ext_resource type="PackedScene" uid="uid://8kgqpey0hj6u" path="res://Scenes/vine.tscn" id="3_8fngt"]
 [ext_resource type="PackedScene" uid="uid://cstc7rc3ie1ak" path="res://Scenes/water.tscn" id="4_b84fk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_uyq8w")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(961, 539)
+texture = ExtResource("2_ub1u7")
 
 [node name="Nutrients" parent="." instance=ExtResource("1_o0tfl")]
 offset_right = 278.0

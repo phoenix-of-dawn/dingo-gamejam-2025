@@ -18,6 +18,7 @@ layout_mode = 0
 offset_left = 10.0
 offset_right = 271.0
 offset_bottom = 56.0
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("2_l4c0m")
 theme_override_font_sizes/font_size = 50
 
@@ -27,6 +28,7 @@ layout_mode = 0
 offset_top = 40.0
 offset_right = 190.0
 offset_bottom = 74.0
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("2_l4c0m")
 theme_override_font_sizes/font_size = 30
 
