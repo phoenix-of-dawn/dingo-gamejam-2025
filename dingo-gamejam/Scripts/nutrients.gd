@@ -2,7 +2,6 @@ extends Control
 
 @export var nutrients: float = 10
 var nutrients_per_second: float = 0.0
-
 @onready var nut_text = $NutrientCount
 @onready var nut_per_sec_text = %NutrientPerSecond
 @onready var scroll_cont = $ScrollContainer
@@ -21,7 +20,7 @@ var upgrades: Dictionary = {
 	"Fatter Deposits": [25000.0, true, 800.0, 9.0],
 	"Iron Surplus++": [50000.0, false, 1500.0, 0],
 	"Expired Milk": [75000.0, true, 2500.0, 12.0],
-	
+
 	"Expired Milk 2.0": [100000.0, true, 4000.0, 15.0],
 	"Banana Shake": [150000.0, true, 6000.0, 18.0],
 	"Chlorophyll Synthesis": [250000.0, true, 10000.0, 20.0],
@@ -84,3 +83,7 @@ func _on_nutrient_countdown_timeout() -> void:
 
 func _on_vine_grown(cost: float) -> void:
 	nutrients -= cost
+
+
+func _on_water_refill() -> void:
+	nutrients *= 0.5

@@ -14,8 +14,25 @@ var growth_costs: Array = [
 	500000, 
 	750000, 
 	1000000, 
-	1500000, 
+	1250000, 
 	2000000,
+]
+var growth_names: Array = [
+	"A Bud Sprouts", 
+	"Taking Over", 
+	"Do You Know the Definition of Insanity?", 
+	"Tear Down the Wall", 
+	"World, Here I Come!", 
+	"", 
+	"", 
+	"", 
+	"", 
+	"", 
+	"", 
+	"", 
+	"", 
+	"", 
+	"The Destroyer of World",
 ]
 var growth_cost = growth_costs[0]
 var current_growth = 1
@@ -24,7 +41,7 @@ signal grow(current_growth: int, growth_cost: float)
 signal win
 
 func _ready() -> void:
-	text = "Cost to next growth: " + str(growth_costs[0])
+	text = str(growth_names[current_growth - 1]) + "\nCost: " + str(growth_cost)
 
 func _on_pressed() -> void:
 	var nutrients = get_parent().get_parent().get_node("Nutrients").nutrients
@@ -36,4 +53,4 @@ func _on_pressed() -> void:
 		else:
 			grow.emit(current_growth, growth_cost)
 			growth_cost = growth_costs[current_growth - 1]
-			text = "Cost to next growth: " + str(growth_costs[current_growth - 1])
+			text = str(growth_names[current_growth - 1]) + "\nCost: " + str(growth_cost)

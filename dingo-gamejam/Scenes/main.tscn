@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c13g62klmxuy2"]
+[gd_scene load_steps=5 format=3 uid="uid://c13g62klmxuy2"]
 
 [ext_resource type="PackedScene" uid="uid://c0avorswms8w6" path="res://Scenes/nutrients.tscn" id="1_o0tfl"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_uyq8w"]
 [ext_resource type="PackedScene" uid="uid://8kgqpey0hj6u" path="res://Scenes/vine.tscn" id="3_8fngt"]
+[ext_resource type="PackedScene" uid="uid://cstc7rc3ie1ak" path="res://Scenes/water.tscn" id="4_b84fk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_uyq8w")
@@ -10,8 +11,13 @@ script = ExtResource("1_uyq8w")
 [node name="Nutrients" parent="." instance=ExtResource("1_o0tfl")]
 offset_right = 278.0
 offset_bottom = 648.0
+nutrients = 2.5
 
 [node name="Vine" parent="." instance=ExtResource("3_8fngt")]
 
+[node name="Water" parent="." instance=ExtResource("4_b84fk")]
+
 [connection signal="grown" from="Vine" to="Nutrients" method="_on_vine_grown"]
+[connection signal="grown" from="Vine" to="Water" method="_on_vine_grown"]
 [connection signal="won" from="Vine" to="." method="_on_vine_won"]
+[connection signal="refill" from="Water" to="Nutrients" method="_on_water_refill"]
