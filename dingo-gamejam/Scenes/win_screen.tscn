@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://dpu8vxp7bp2ca"]
+[gd_scene load_steps=3 format=3 uid="uid://dpu8vxp7bp2ca"]
+
+[ext_resource type="Texture2D" uid="uid://dd4tdru52eoq3" path="res://Assets/Art/vinesBGS.png" id="1_0xpk4"]
+[ext_resource type="Texture2D" uid="uid://d3yihlos0jvfh" path="res://Assets/Art/winning_screen_stars.png" id="1_r4dge"]
 
 [node name="WinScreen" type="Control"]
 layout_mode = 3
@@ -7,3 +10,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_r4dge")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 621)
+scale = Vector2(6, 6)
+texture = ExtResource("1_0xpk4")
+hframes = 8
+vframes = 5
+frame = 32
