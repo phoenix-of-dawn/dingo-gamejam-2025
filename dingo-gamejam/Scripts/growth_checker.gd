@@ -20,7 +20,7 @@ var growth_costs: Array = [
 var growth_names: Array = [
 	"A Bud Sprouts", 
 	"Taking Over", 
-	"Do You Know the Definition of Insanity?", 
+	"Insanity", 
 	"Tear Down the Wall", 
 	"World, Here I Come!", 
 	"The Takeover", 
