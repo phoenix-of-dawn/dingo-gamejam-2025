@@ -4,10 +4,16 @@ extends Control
 @onready var button = $Refill
 
 signal refill()
+signal death()
+
 var refill_uses = 3
 
 func _ready() -> void:
 	update_button()
+
+func _process(delta: float) -> void:
+	if water_progress.value <= 0:
+		death.emit()
 
 func _on_timer_timeout() -> void:
 	water_progress.value -= 1
