@@ -43,5 +43,6 @@ offset_bottom = 40.0
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+theme_override_constants/separation = 2
 
 [connection signal="timeout" from="NutrientCountdown" to="." method="_on_nutrient_countdown_timeout"]
