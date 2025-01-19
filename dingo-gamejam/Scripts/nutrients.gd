@@ -1,6 +1,6 @@
 extends Control
 
-@export var nutrients: float = 10
+@export var nutrients: float = 1000000000000000000000
 var nutrients_per_second: float = 0.0
 
 @onready var nut_text = $NutrientCount
