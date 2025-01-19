@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://8kgqpey0hj6u"]
 
 [ext_resource type="Script" path="res://Scripts/vine_growth.gd" id="1_jkw8p"]
-[ext_resource type="Texture2D" uid="uid://dgill75cv6uj1" path="res://Assets/Art/vinesBGS.png" id="2_sp5uc"]
+[ext_resource type="Texture2D" uid="uid://b02xq7b55va6i" path="res://Assets/Art/vinesBGS.png" id="2_sp5uc"]
 [ext_resource type="Script" path="res://Scripts/growth_checker.gd" id="3_bfwki"]
 [ext_resource type="FontFile" uid="uid://cgv2xl442kja0" path="res://Assets/Silver.ttf" id="3_ny003"]
 
