@@ -14,24 +14,32 @@ corner_radius_bottom_left = 20
 shadow_size = 5
 shadow_offset = Vector2(-3.41, 3.41)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohamn"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1nbd"]
+bg_color = Color(0.856067, 0.856067, 0.856067, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mnl7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gnfsi"]
 bg_color = Color(0.835294, 0.835294, 0.835294, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 shadow_size = 5
-shadow_offset = Vector2(-3.41, 3.41)
+shadow_offset = Vector2(0, 3.41)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xf20n"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djhvf"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-shadow_offset = Vector2(-3.41, 3.41)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
 
 [sub_resource type="Animation" id="Animation_0yovj"]
 length = 0.8
@@ -107,9 +115,9 @@ theme_override_fonts/font = ExtResource("1_comaq")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8cr77")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_5f4cd")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ohamn")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6mnl7")
-theme_override_styles/normal = SubResource("StyleBoxFlat_xf20n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p1nbd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gnfsi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_djhvf")
 script = ExtResource("1_k7pk4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
