@@ -26,9 +26,11 @@ offset_right = 1908.0
 offset_bottom = 1071.0
 theme_override_styles/background = SubResource("StyleBoxFlat_gyahv")
 theme_override_styles/fill = SubResource("StyleBoxFlat_k4aew")
-value = 100.0
+max_value = 30.0
+value = 30.0
 rounded = true
 fill_mode = 3
+show_percentage = false
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
