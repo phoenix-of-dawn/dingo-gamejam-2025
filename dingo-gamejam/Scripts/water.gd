@@ -16,7 +16,7 @@ func _on_timer_timeout() -> void:
 func _on_vine_grown(_cost: float) -> void:
 	water_progress.value = 100
 	refill_uses = 3
-	button.disabled = true
+	button.disabled = false
 	update_button()
 
 
