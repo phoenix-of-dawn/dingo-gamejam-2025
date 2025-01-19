@@ -1,9 +1,39 @@
-[gd_scene load_steps=22 format=3 uid="uid://8kgqpey0hj6u"]
+[gd_scene load_steps=27 format=3 uid="uid://8kgqpey0hj6u"]
 
 [ext_resource type="Script" path="res://Scripts/vine_growth.gd" id="1_jkw8p"]
-[ext_resource type="Texture2D" uid="uid://dgill75cv6uj1" path="res://Assets/Art/vinesBGS.png" id="2_sp5uc"]
-[ext_resource type="Script" path="res://Scenes/growth_checker.gd" id="3_bfwki"]
+[ext_resource type="Texture2D" uid="uid://b02xq7b55va6i" path="res://Assets/Art/vinesBGS.png" id="2_sp5uc"]
+[ext_resource type="Script" path="res://Scripts/growth_checker.gd" id="3_bfwki"]
 [ext_resource type="FontFile" uid="uid://cgv2xl442kja0" path="res://Assets/Silver.ttf" id="3_ny003"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wdlhq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0p2n"]
+bg_color = Color(0.244776, 0.244776, 0.244776, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k66wj"]
+bg_color = Color(0.856067, 0.856067, 0.856067, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4thh"]
+bg_color = Color(0.835294, 0.835294, 0.835294, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2nir"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="Animation" id="Animation_kmvua"]
 resource_name = "1"
@@ -315,8 +345,19 @@ offset_left = 596.0
 offset_top = 27.0
 offset_right = 1305.0
 offset_bottom = 179.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ny003")
 theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wdlhq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_i0p2n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k66wj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f4thh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q2nir")
 script = ExtResource("3_bfwki")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -2,6 +2,7 @@ extends Control
 
 @export var nutrients: float = 10
 var nutrients_per_second: float = 0.0
+
 @onready var nut_text = $NutrientCount
 @onready var nut_per_sec_text = %NutrientPerSecond
 @onready var scroll_cont = $ScrollContainer
@@ -48,7 +49,7 @@ var upgrades: Dictionary = {
 func _ready() -> void:
 	scroll_cont.position.y = nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y - 10
 	scroll_cont.size.y = 1000 - nut_text.size.y + nut_per_sec_text.size.y + nut_text.position.y
-	scroll_cont.size.x = 250
+	scroll_cont.size.x = 230
 
 	scroll_cont.position.x = size.x / 2 - scroll_cont.size.x / 2
 	make_buttons()
