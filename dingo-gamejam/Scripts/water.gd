@@ -13,7 +13,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if water_progress.value <= 0:
-		print_debug("DIED")
 		death.emit()
 
 func _on_timer_timeout() -> void:

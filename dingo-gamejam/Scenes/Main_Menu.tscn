@@ -1,12 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxfo2j2as6ipg"]
+[gd_scene load_steps=8 format=3 uid="uid://bxfo2j2as6ipg"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_77p8e"]
-[ext_resource type="Texture2D" uid="uid://cr21t25beytyu" path="res://Scenes/OIP.jpg" id="2_idxbp"]
 [ext_resource type="FontFile" uid="uid://cgv2xl442kja0" path="res://Assets/Silver.ttf" id="3_uruv4"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fkvpa"]
-texture = ExtResource("2_idxbp")
-modulate_color = Color(0.489622, 0.489622, 0.489622, 1)
+[sub_resource type="SpriteFrames" id="SpriteFrames_kggu3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dq1r0"]
 
@@ -42,26 +39,12 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 15.0
-offset_top = 6.0
-offset_right = 15.0
-offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_77p8e")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -18.0
-offset_top = -12.0
-offset_right = -5.0
-offset_bottom = 3.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_fkvpa")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kggu3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
